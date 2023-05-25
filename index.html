@@ -6,11 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Challenge ONE: Principiante en programación</title>
 </head>
 <body>
+    <header>
+        <img src="./images/Logo.svg" alt="Logo de Alura">
+        <h1>Encriptador de Texto</h1>
+    </header>
 
+    <main>
+        <section class="area-input">
+            <div class="texto-usuario">
+                <textarea id="txt-original" cols="70" rows="10">Pon aquí tu texto</textarea>
+                <p>Ingresa el texto sin acentos ni caracteres especiales.</p>
+            </div>
+            <div class="btns-input">
+                <input type="submit" value="Encriptar" id="encriptar">
+                <input type="submit" value="Desencriptar" id="desencriptar">
+            </div>
+        </section>
 
+        <section class="area-output">
+            <div class="output-inicial" id="out-img">
+                <img src="./images/Muñeco.svg" alt="Figura texto no encontrado">
+                <p>Aún no has ingresado ningún texto a encriptar/desencriptar.</p>
+            </div>
+            <div class="output-texto" id="out-txt">
+
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>Página web hecha por Ingrid Silva.</p>
+        <p>Mayo 2023</p>
+        <a href="https://www.linkedin.com/in/ingrid-silva-bb05b4270/">LinkedIn</a>
+        <a href="https://github.com/rainy-ss">GitHub</a>
+    </footer>
 
     <script src="script.js"></script> 
 </body>
