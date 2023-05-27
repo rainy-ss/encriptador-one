@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+    </style>
     <title>Challenge ONE: Principiante en programación</title>
 </head>
+
 <body>
     <header>
         <img src="./images/Logo.svg" alt="Logo de Alura">
@@ -17,34 +21,44 @@
     <main>
         <section class="area-input">
             <div class="texto-usuario">
-                <textarea id="txt-original" cols="70" rows="10">Pon aquí tu texto</textarea>
-                <p>Ingresa el texto sin acentos ni caracteres especiales.</p>
+                <button id="limpiar" class="btn-limpiar">Limpiar</button>
+                <textarea id="txt-original" placeholder="Pon aquí tu texto" ></textarea>
+                <p>Ingresa el texto sin acentos (La salida es en minúsculas).</p>
             </div>
             <div class="btns-input">
-                <input type="submit" value="Encriptar" id="encriptar">
-                <input type="submit" value="Desencriptar" id="desencriptar">
+                <input type="submit" value="Desencriptar" id="desencriptar" class="btn-submit">
+                <input type="submit" value="Encriptar" id="encriptar" class="btn-submit">
             </div>
         </section>
 
-        <section class="area-output">
-            <div class="output-inicial" id="out-img">
+        <section class="area-output" id="output">
+            <div class="output-inicial old-out" id="out-img">
                 <img src="./images/Muñeco.svg" alt="Figura texto no encontrado">
                 <p>Aún no has ingresado ningún texto a encriptar/desencriptar.</p>
             </div>
-            <div class="output-texto" id="out-txt">
-
-            </div>
         </section>
-        
+
     </main>
 
     <footer>
-        <p>Página web hecha por Ingrid Silva.</p>
-        <p>Mayo 2023</p>
-        <a href="https://www.linkedin.com/in/ingrid-silva-bb05b4270/">LinkedIn</a>
-        <a href="https://github.com/rainy-ss">GitHub</a>
+        <div class="footer-text">
+            <p>Página web hecha por Ingrid Silva</p>
+            <p>Mayo 2023</p>
+        </div>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/ingrid-silva-bb05b4270/">
+                <img class="icon" src="./images/linkedin-svgrepo-com.svg" alt="Ícono LinkedIn">
+                LinkedIn
+            </a>
+            <a href="https://github.com/rainy-ss">
+                <img class="icon" src="./images/github-142-svgrepo-com.svg" alt="Ícono GitHub">
+                GitHub
+            </a>
+            </div>
+        
     </footer>
 
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 </body>
+
 </html>

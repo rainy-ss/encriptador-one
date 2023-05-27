@@ -1,6 +1,13 @@
 html {
     box-sizing: border-box;
     font-size: 16px;
+    font-family: 'Comfortaa', Calibri;
+    font-weight: 100;
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    background-color: #fff5f5;
+    color: #FF7272;
 }
 
 *,
@@ -32,4 +39,443 @@ ul {
 img {
     max-width: 100%;
     height: auto;
+}
+
+button {
+    cursor: pointer;
+    transition: background-color 0.2s ease-in, border 0.2s ease-in;
+}
+
+button:active {
+    transform: translateX(-3px);
+    transform: translateY(1px);
+}
+
+
+header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding-right: 40px;
+}
+
+header h1 {
+    width: 80%;
+    font-weight: 700;
+    font-size: 2.4rem;
+    text-align: end;
+}
+
+header img {
+    height: 60%;
+}
+
+
+main {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    padding: 15px 40px;
+    height: 80vh;
+    overflow: hidden;
+}
+
+.area-input {
+    width: 70%;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+
+.texto-usuario {
+    height: 80%;
+    width: 100%;
+    font-size: 0.8rem;
+    color: #628394;
+    position: relative;
+    padding-top: 5vh;
+    /* border: 1px solid black; */
+}
+
+.btn-limpiar {
+    font-family: inherit;
+    width: 15%;
+    font-size: 1rem;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: 1px solid #ff8686;
+    background-color: #FDE2F3;
+    color: #ff8686;
+    border-radius: 15px;
+}
+
+.btn-limpiar:hover {
+    border: 1px solid #e98e8e;
+    background-color: #e98e8e;
+    color: #f7e8e8;
+}
+
+
+
+
+.texto-usuario textarea {
+    margin-bottom: 10px;
+    resize: none;
+    background-color: #c44646;
+    font-weight: 600;
+    color: #f7e5eb;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 90%;
+    font-size: 1.2rem;
+}
+
+.texto-usuario textarea:focus {
+    border: none;
+    overflow: auto;
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.btns-input {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+
+.btn-submit {
+    font-family: inherit;
+    height: 60%;
+    width: 35%;
+    font-size: 1.2rem;
+    border: 1px solid #FFCBCB;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+
+
+
+#encriptar {
+    background-color: #0A3871;
+    border: 1px solid #D8DFE8;
+    color: #D8DFE8;
+
+}
+
+#desencriptar {
+    background-color: #D8DFE8;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+
+#encriptar:hover {
+    background-color: #051c3a;
+}
+
+#desencriptar:hover {
+    background-color: #9ab4d6;
+}
+
+.area-output {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: end;
+}
+
+.output-inicial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.output-inicial img {
+    margin-bottom: 20px;
+}
+
+.output-inicial,
+.output-procesado {
+    background-color: #fffafa;
+    width: 90%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 8px 4px rgba(30, 30, 82, 0.16);
+    -webkit-box-shadow: 0px 0px 8px 4px rgba(30, 30, 82, 0.16);
+    -moz-box-shadow: 0px 0px 8px 4px rgba(30, 30, 82, 0.16);
+}
+
+.output-procesado {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.output-procesado textarea {
+    margin-bottom: 10px;
+    resize: none;
+    color: rgb(128, 106, 253);
+    border: transparent;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    height: 90%;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+}
+
+.copiar {
+    font-family: inherit;
+    height: 10%;
+    width: 35%;
+    font-size: 1.5rem;
+    border: 1px solid #FFCBCB;
+    background-color: #faebd7;
+    color: #df7575;
+    border-radius: 15px;
+}
+
+.copiar.active {
+    width: 45%;
+    font-style: italic;
+    background-color: #f5e0c5;
+}
+
+.copiar:hover {
+    border: 1px solid #f0b3b3;
+    background-color: #f5b8bb;
+    color: #f7e3e3;
+}
+
+
+
+footer {
+    border-top: 1px solid #fce4e4;
+    height: 10vh;
+    background: linear-gradient(#fff5f5, #fddede);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-left: 10px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    width: 30%;
+    font-size: 0.7rem;
+}
+
+.links a {
+    color: #f7e3e3;
+    background-color: #eea3a3;
+    text-decoration: none;
+    padding: 0 5px;
+}
+
+.links a:hover {
+    background-color: #c96161;
+}
+
+.icon {
+    width: 1rem;
+}
+
+.footer-text {
+    font-size: 0.8rem;
+}
+
+
+@media screen and (min-width: 700px) and (max-width: 1000px) and (min-height: 1000px) {
+
+
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+
+    }
+
+    .area-input {
+        width: 100%;
+        height: 60%;
+    }
+
+    .texto-usuario {
+        padding-top: 3vh;
+    }
+
+    .texto-usuario textarea {
+        font-size: 1.5rem;
+    }
+
+    .area-output {
+        height: 40%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .output-inicial {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .output-inicial img {
+        width: 40%;
+        margin-bottom: 0;
+    }
+
+    .output-procesado textarea {
+        font-size: 1.3rem;
+    }
+
+}
+
+
+@media screen and (max-width: 700px) and (min-height: 500px){
+
+    header {
+        padding-right: 10px;
+    }
+
+    header img {
+        height: 50%;
+    }
+
+    header h1 {
+        width: 80%;
+        font-weight: 700;
+        font-size: 1.5rem;
+        text-align: end;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        padding: 5px 10px 10px;
+        height: 83vh;
+
+    }
+
+    .area-input {
+        width: 100%;
+        height: 60%;
+    }
+
+    .texto-usuario {
+        padding-top: 4vh;
+        font-size: 0.7rem;
+    }
+
+    .btn-limpiar {
+        font-size: 0.8rem;
+        width: 20%;
+    }
+
+    .texto-usuario textarea {
+        font-size: 1.2rem;
+        padding: 10px;
+        margin-bottom: 5px;
+    }
+
+    .btn-submit {
+        height: 70%;
+        width: 40%;
+        font-size: 1rem;
+
+    }
+
+    .area-output {
+        height: 40%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .output-inicial {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .output-inicial img {
+        width: 40%;
+        margin-bottom: 0;
+    }
+
+    .output-procesado {
+        width: 100%;
+        padding: 5px 10px;
+    }
+
+    .output-procesado textarea {
+        font-size: 1rem;
+        padding: 0;
+    }
+
+
+    .copiar {
+        font-family: inherit;
+        height: 10%;
+        width: 35%;
+        font-size: 1rem;
+        border: 1px solid #FFCBCB;
+        background-color: #faebd7;
+        color: #df7575;
+        border-radius: 15px;
+    }
+
+    footer {
+        height: 7vh;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+
+    }
+
+    .footer-text {
+        font-size: 0.7rem;
+        width: 60%;
+    }
+
+    .links {
+        width: 40%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .links a{
+        width: 70%;
+    }
+
 }
